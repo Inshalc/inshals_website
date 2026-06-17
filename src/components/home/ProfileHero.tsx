@@ -13,7 +13,7 @@ export function ProfileHero() {
       className="mb-10 flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:justify-center sm:gap-10"
     >
       <div className="relative shrink-0">
-        <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-accent/30 to-white/10 opacity-60 blur-sm" />
+        <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-accent/30 to-foreground/10 opacity-60 blur-sm" />
         <div className="relative h-28 w-28 overflow-hidden rounded-2xl border border-glass-border bg-glass sm:h-36 sm:w-36">
           <Image
             src={profile.profileImage}

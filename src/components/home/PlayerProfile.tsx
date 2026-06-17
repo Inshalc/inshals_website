@@ -17,7 +17,7 @@ export function PlayerProfile() {
           </p>
           <h2 className="mt-1 text-xl font-semibold sm:text-2xl">{profile.name}</h2>
           <div className="mt-2 flex flex-wrap gap-2 font-mono text-xs text-muted">
-            <span className="rounded bg-white/5 px-2 py-0.5">{profile.class}</span>
+            <span className="rounded bg-chip px-2 py-0.5">{profile.class}</span>
             <span className="rounded bg-accent/10 px-2 py-0.5 text-accent">
               {profile.subclass}
             </span>
@@ -33,13 +33,13 @@ export function PlayerProfile() {
         </div>
       </div>
 
-      <div className="mb-4 h-2 overflow-hidden rounded-full bg-white/5">
+      <div className="mb-4 h-2 overflow-hidden rounded-full bg-track">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${xpPercent}%` }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="h-full rounded-full bg-gradient-to-r from-white/30 to-white/50"
+          className="h-full rounded-full bg-gradient-to-r from-foreground/30 to-foreground/50"
         />
       </div>
 

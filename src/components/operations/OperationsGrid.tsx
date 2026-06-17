@@ -2,15 +2,25 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Crosshair, X } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { operations } from "@/data/operations";
+import { operations, type Operation } from "@/data/operations";
 
-const statusLabels = {
-  active: { label: "ACTIVE", color: "text-green-400" },
+const statusLabels: Record<
+  Operation["status"],
+  { label: string; color: string }
+> = {
   completed: { label: "COMPLETED", color: "text-blue-400" },
-  "in-progress": { label: "IN PROGRESS", color: "text-yellow-400" },
+  stealth: { label: "STEALTH", color: "text-muted" },
 };
+
+function getStatus(status: Operation["status"]) {
+  return (
+    statusLabels[status] ?? {
+      label: String(status).toUpperCase(),
+      color: "text-muted",
+    }
+  );
+}
 
 export function OperationsGrid() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -26,29 +36,33 @@ export function OperationsGrid() {
             onClick={() => setSelected(op.id)}
             className="cursor-pointer group"
           >
-            <div className="flex items-start justify-between">
-              <Crosshair className="h-5 w-5 text-accent" />
+            <div className="flex items-start justify-end">
               <span
-                className={`font-mono text-xs ${statusLabels[op.status].color}`}
+                className={`font-mono text-xs ${getStatus(op.status).color}`}
               >
-                {statusLabels[op.status].label}
+                {getStatus(op.status).label}
               </span>
             </div>
-            <h3 className="mt-3 text-lg font-semibold group-hover:text-accent transition-colors">
+            <h3 className="mt-3 text-lg font-semibold transition-colors group-hover:text-accent">
               {op.codename}
             </h3>
             <p className="mt-2 line-clamp-2 text-sm text-muted">
               {op.objective}
             </p>
-            <div className="mt-3 flex flex-wrap gap-1.5">
+            <div className="mt-3 flex flex-wrap items-center gap-1.5">
               {op.techStack.slice(0, 3).map((tech) => (
                 <span
                   key={tech}
-                  className="rounded bg-white/5 px-2 py-0.5 font-mono text-[10px] text-muted"
+                  className="rounded bg-chip px-2 py-0.5 font-mono text-[10px] text-muted"
                 >
                   {tech}
                 </span>
               ))}
+              {op.github && (
+                <span className="font-mono text-[10px] text-muted/60">
+                  · repo linked
+                </span>
+              )}
             </div>
           </GlassCard>
         ))}
@@ -60,7 +74,7 @@ export function OperationsGrid() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-overlay p-4 backdrop-blur-sm"
             onClick={() => setSelected(null)}
           >
             <motion.div
@@ -68,7 +82,7 @@ export function OperationsGrid() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-lg rounded-xl border border-accent/20 bg-[#0a0a0a] p-6 shadow-2xl"
+              className="w-full max-w-lg rounded-xl border border-accent/20 bg-surface-elevated p-6 shadow-2xl"
             >
               <div className="flex items-start justify-between">
                 <div>
@@ -79,9 +93,9 @@ export function OperationsGrid() {
                 </div>
                 <button
                   onClick={() => setSelected(null)}
-                  className="rounded p-1 text-muted hover:text-foreground"
+                  className="rounded px-2 py-1 font-mono text-xs text-muted hover:text-foreground"
                 >
-                  <X className="h-5 w-5" />
+                  close
                 </button>
               </div>
 
@@ -102,7 +116,7 @@ export function OperationsGrid() {
                     {operation.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="rounded bg-white/5 px-2.5 py-1 font-mono text-xs"
+                        className="rounded bg-chip px-2.5 py-1 font-mono text-xs"
                       >
                         {tech}
                       </span>
@@ -114,9 +128,9 @@ export function OperationsGrid() {
                     Status
                   </p>
                   <p
-                    className={`mt-1 font-mono text-sm ${statusLabels[operation.status].color}`}
+                    className={`mt-1 font-mono text-sm ${getStatus(operation.status).color}`}
                   >
-                    {statusLabels[operation.status].label}
+                    {getStatus(operation.status).label}
                   </p>
                 </div>
                 <div>
@@ -131,8 +145,25 @@ export function OperationsGrid() {
                   <p className="font-mono text-xs uppercase text-accent">
                     Briefing
                   </p>
-                  <p className="mt-1 text-sm text-muted">{operation.description}</p>
+                  <p className="mt-1 text-sm text-muted">
+                    {operation.description}
+                  </p>
                 </div>
+
+                {operation.github ? (
+                  <a
+                    href={operation.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center rounded-lg border border-glass-border bg-glass px-4 py-2.5 font-mono text-sm transition-all hover:border-accent/30 hover:bg-accent/5"
+                  >
+                    View on GitHub →
+                  </a>
+                ) : (
+                  <p className="font-mono text-xs text-muted">
+                    Repository classified — stealth mode active.
+                  </p>
+                )}
               </div>
             </motion.div>
           </motion.div>

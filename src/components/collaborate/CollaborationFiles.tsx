@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FileText, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { collaborations } from "@/data/collaborations";
@@ -26,7 +26,6 @@ export function CollaborationFiles() {
             className="cursor-pointer"
           >
             <div className="flex items-start gap-3">
-              <FileText className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
               <div className="flex-1">
                 <div className="flex items-start justify-between">
                   <div>
@@ -74,7 +73,7 @@ export function CollaborationFiles() {
                           {item.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="rounded bg-white/5 px-2 py-0.5 font-mono text-xs text-muted"
+                              className="rounded bg-chip px-2 py-0.5 font-mono text-xs text-muted"
                             >
                               {tag}
                             </span>

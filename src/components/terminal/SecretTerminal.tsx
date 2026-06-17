@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Terminal as TerminalIcon } from "lucide-react";
 import { profile, skills } from "@/data/profile";
 import { operations } from "@/data/operations";
 
@@ -104,7 +103,7 @@ export function SecretTerminal({ isOpen, onClose }: SecretTerminalProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 p-4 backdrop-blur-sm sm:items-center"
+          className="fixed inset-0 z-50 flex items-end justify-center bg-overlay p-4 backdrop-blur-sm sm:items-center"
           onClick={onClose}
         >
           <motion.div
@@ -112,18 +111,15 @@ export function SecretTerminal({ isOpen, onClose }: SecretTerminalProps) {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 50, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="flex h-[70vh] w-full max-w-2xl flex-col overflow-hidden rounded-xl border border-accent/20 bg-[#0a0a0a] shadow-2xl shadow-accent/10"
+            className="flex h-[70vh] w-full max-w-2xl flex-col overflow-hidden rounded-xl border border-accent/20 bg-surface-elevated shadow-2xl shadow-accent/10"
           >
             <div className="flex items-center justify-between border-b border-glass-border px-4 py-3">
-              <div className="flex items-center gap-2">
-                <TerminalIcon className="h-4 w-4 text-accent" />
-                <span className="font-mono text-sm text-foreground">secret_terminal</span>
-              </div>
+              <span className="font-mono text-sm text-foreground">secret_terminal</span>
               <button
                 onClick={onClose}
-                className="rounded p-1 text-muted transition-colors hover:text-foreground"
+                className="rounded px-2 py-1 font-mono text-xs text-muted transition-colors hover:text-foreground"
               >
-                <X className="h-4 w-4" />
+                close
               </button>
             </div>
 

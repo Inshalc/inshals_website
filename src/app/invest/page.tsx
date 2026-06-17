@@ -43,7 +43,7 @@ export default function InvestPage() {
           </p>
           <p>
             <strong className="text-foreground">Builder instinct:</strong>{" "}
-            Multiple active operations (NewLeaf, EduLift, OpenHeart) signal
+            Multiple completed operations (NewLeaf, EduLift, OpenHeart) and stealth build Vantage signal
             entrepreneurial momentum beyond traditional career paths.
           </p>
         </div>

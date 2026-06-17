@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Award, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { awards } from "@/data/awards";
 
@@ -23,7 +23,6 @@ export function AwardsSection() {
             className="cursor-pointer"
           >
             <div className="flex items-start gap-3">
-              <Award className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
               <div className="flex-1">
                 <div className="flex items-start justify-between">
                   <div>

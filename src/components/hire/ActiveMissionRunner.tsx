@@ -20,7 +20,7 @@ export function ActiveMissionRunner() {
         alt=""
         width={72}
         height={52}
-        className="h-10 w-auto object-contain mix-blend-screen sm:h-11"
+        className="h-10 w-auto object-contain mix-blend-screen sprite-blend sm:h-11"
         draggable={false}
       />
     </motion.div>

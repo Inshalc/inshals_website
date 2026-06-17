@@ -18,7 +18,7 @@ export function EvolutionTimeline() {
 
   return (
     <div className="relative">
-      <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-accent/50 via-white/10 to-transparent sm:left-6" />
+      <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-accent/50 via-foreground/10 to-transparent sm:left-6" />
 
       <div className="space-y-10">
         {yearGroups.map((group, groupIndex) => (

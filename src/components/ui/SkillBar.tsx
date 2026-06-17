@@ -15,13 +15,13 @@ export function SkillBar({ name, level, delay = 0 }: SkillBarProps) {
         <span className="text-foreground/80">{name}</span>
         <span className="text-muted">{level}%</span>
       </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-white/5">
+      <div className="h-1.5 overflow-hidden rounded-full bg-track">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${level}%` }}
           viewport={{ once: true }}
           transition={{ delay, duration: 1, ease: "easeOut" }}
-          className="h-full rounded-full bg-gradient-to-r from-white/25 to-white/45"
+          className="h-full rounded-full bg-gradient-to-r from-foreground/25 to-foreground/45"
         />
       </div>
     </div>

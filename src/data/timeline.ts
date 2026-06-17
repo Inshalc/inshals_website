@@ -90,7 +90,7 @@ export const timeline: TimelineMilestone[] = [
     type: "career",
   },
   {
-    id: "hackathon-host",
+    id: "hackci-host",
     year: "2026",
     sortYear: 2026.05,
     title: "Hosted Own Hackathon",
@@ -100,9 +100,9 @@ export const timeline: TimelineMilestone[] = [
     type: "leadership",
   },
   {
-    id: "hackathon-host",
+    id: "technisahacks-growth",
     year: "2026",
-    sortYear: 2026.05,
+    sortYear: 2026.06,
     title: "Growth Lead",
     subtitle: "TechnisaHacks — Organizer",
     narrative:

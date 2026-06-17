@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 
 const paths = [
@@ -47,10 +46,7 @@ export function PathNavigation() {
         {paths.map((path, i) => (
           <Link key={path.href} href={path.href}>
             <GlassCard delay={i * 0.1} className="group h-full">
-              <div className="flex items-start justify-end">
-                <ArrowRight className="h-4 w-4 text-muted transition-transform group-hover:translate-x-1 group-hover:text-accent" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground">
+              <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-accent">
                 {path.title}
               </h3>
               <p className="mt-1 font-mono text-xs text-accent">{path.subtitle}</p>

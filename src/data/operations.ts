@@ -3,9 +3,10 @@ export interface Operation {
   codename: string;
   objective: string;
   techStack: string[];
-  status: "active" | "completed" | "in-progress";
+  status: "completed" | "stealth";
   impact: string;
   description: string;
+  github?: string;
 }
 
 export const operations: Operation[] = [
@@ -13,36 +14,51 @@ export const operations: Operation[] = [
     id: "newleaf",
     codename: "Operation NewLeaf",
     objective:
-      "Create a platform or initiative focused on fresh starts, growth, and positive transformation through technology.",
-    techStack: ["React", "Node.js", "TypeScript", "Cloud Services"],
-    status: "in-progress",
+      "AI-powered settlement assistant helping newcomers navigate life in Canada, the U.S., and the U.K.",
+    techStack: ["React Native", "Expo", "Node.js", "Firebase", "AI/ML"],
+    status: "completed",
+    github: "https://github.com/Inshalc/NewLeaf",
     impact:
-      "Designed to empower users with tools for personal and professional renewal. Building with scalability and user experience as core priorities.",
+      "Combines document conversion, settlement checklists, and a localized assistant to help immigrants adapt with confidence.",
     description:
-      "A mission-driven project exploring how technology can support new beginnings — whether in education, career transitions, or personal development.",
+      "An all-in-one smart companion for newcomers — turning paperwork, cultural norms, and everyday systems into a guided, approachable experience.",
   },
   {
     id: "edulift",
     codename: "Operation EduLift",
     objective:
-      "Elevate educational access and learning outcomes through innovative software solutions.",
-    techStack: ["Python", "React", "AI/ML", "PostgreSQL"],
-    status: "active",
+      "AI-powered teaching assistant for lesson planning, quiz creation, grading, and student performance insights.",
+    techStack: ["Python", "AI/ML", "Data Analysis", "Automation"],
+    status: "completed",
+    github: "https://github.com/Inshalc/EduLift",
     impact:
-      "Aims to bridge gaps in educational technology by creating accessible, intelligent learning tools for students and educators.",
+      "Helps educators generate lesson plans, automate grading, and surface actionable insights from student performance data.",
     description:
-      "An education-focused operation leveraging AI and modern web technologies to make learning more engaging, personalized, and effective.",
+      "Built to bridge gaps in educational technology — making personalized, data-informed teaching more accessible for educators.",
   },
   {
     id: "openheart",
     codename: "Operation OpenHeart",
     objective:
-      "Build technology with empathy at its core — solutions that prioritize human connection and wellbeing.",
-    techStack: ["TypeScript", "Next.js", "API Design", "Mobile-First"],
-    status: "in-progress",
+      "Accessible dating app inclusive of people with disabilities — text, voice, and assistive hardware support.",
+    techStack: ["Next.js", "Flask", "Python", "ElevenLabs", "Arduino"],
+    status: "completed",
+    github: "https://github.com/alyssayuan17/OpenHeart",
     impact:
-      "Focused on health and wellness technology that puts people first. Emphasizes thoughtful design and meaningful user impact.",
+      "Focused on accessible communication so everyone can connect comfortably. Built for ElleHacks with AI chatbot and TTS integration.",
     description:
-      "Inspired by experiences in health-tech (Heartline), this operation explores how open, compassionate technology can improve lives.",
+      "A health-forward social experience putting accessibility first — inclusive design, voice integration, and hardware-assisted interaction.",
+  },
+  {
+    id: "vantage",
+    codename: "Secret Mission — Vantage",
+    objective:
+      "Stealth-mode legal tech tool built for lawyers — streamlining workflows and intelligence for legal practice.",
+    techStack: ["TypeScript", "AI/ML", "Legal Tech", "SaaS"],
+    status: "stealth",
+    impact:
+      "In active stealth development. Purpose-built tooling for legal professionals — details under wraps until launch.",
+    description:
+      "Vantage is a confidential operation targeting the legal industry. Mission parameters classified. Check back post-launch.",
   },
 ];

@@ -3,8 +3,18 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { growthStats } from "@/data/profile";
+import { useTheme } from "@/components/theme/ThemeProvider";
 
 export function GrowthChart() {
+  const { theme } = useTheme();
+  const isLight = theme === "light";
+  const gridStroke = isLight ? "rgba(0,0,0,0.06)" : "rgba(255,255,255,0.05)";
+  const labelClass = isLight
+    ? "fill-foreground/40 text-[8px] font-mono"
+    : "fill-white/30 text-[8px] font-mono";
+  const yearClass = isLight
+    ? "fill-foreground/55 text-[9px] font-mono"
+    : "fill-white/50 text-[9px] font-mono";
   const data = [
     { year: "2022", value: 35 },
     { year: "2023", value: 52 },
@@ -56,13 +66,13 @@ export function GrowthChart() {
                   y1={y}
                   x2={width - padding}
                   y2={y}
-                  stroke="rgba(255,255,255,0.05)"
+                  stroke={gridStroke}
                 />
                 <text
                   x={padding - 8}
                   y={y + 3}
                   textAnchor="end"
-                  className="fill-white/30 text-[8px] font-mono"
+                  className={labelClass}
                 >
                   {v}
                 </text>
@@ -106,7 +116,7 @@ export function GrowthChart() {
               x={p.x}
               y={height - 10}
               textAnchor="middle"
-              className="fill-white/50 text-[9px] font-mono"
+              className={yearClass}
             >
               {p.year}
             </text>
@@ -129,7 +139,7 @@ export function StatGrid() {
             </span>
             <span className="font-mono text-xs text-green-400">{stat.trend}</span>
           </div>
-          <div className="mt-2 h-1 overflow-hidden rounded-full bg-white/5">
+          <div className="mt-2 h-1 overflow-hidden rounded-full bg-track">
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: `${stat.value}%` }}

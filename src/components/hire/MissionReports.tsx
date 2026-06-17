@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Mail } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -109,9 +109,8 @@ export function MissionReports() {
       <div className="mt-10">
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 font-mono text-sm text-white transition-all hover:bg-accent/90"
+          className="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-mono text-sm text-white transition-all hover:bg-accent/90"
         >
-          <Mail className="h-4 w-4" />
           Contact
         </Link>
       </div>
