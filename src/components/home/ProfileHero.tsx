@@ -34,7 +34,7 @@ export function ProfileHero() {
           {profile.name}
         </h1>
         <p className="mt-2 font-mono text-sm text-muted">
-          {profile.class} · {profile.subclass} · Impact-Driven
+          {profile.class} · {profile.subclass} · {profile.alignment}
         </p>
       </div>
     </motion.div>

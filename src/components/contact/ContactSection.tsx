@@ -6,24 +6,36 @@ import Link from "next/link";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { profile } from "@/data/profile";
 
+function mailtoHref(subject?: string) {
+  const params = new URLSearchParams();
+  if (subject) params.set("subject", subject);
+  const query = params.toString();
+  return query
+    ? `mailto:${profile.contact.email}?${query}`
+    : `mailto:${profile.contact.email}`;
+}
+
 const channels = [
   {
     icon: Mail,
     label: "Email",
     value: profile.contact.email,
-    href: `mailto:${profile.contact.email}`,
+    href: mailtoHref(),
+    external: false,
   },
   {
     icon: ExternalLink,
     label: "LinkedIn",
     value: "linkedin.com/in/inshalch",
     href: profile.contact.linkedin,
+    external: true,
   },
   {
     icon: Code2,
     label: "GitHub",
-    value: "github.com/inshalch",
+    value: "github.com/Inshalc",
     href: profile.contact.github,
+    external: true,
   },
 ];
 
@@ -32,28 +44,32 @@ export function ContactSection() {
     <div>
       <div className="grid gap-4 sm:grid-cols-3">
         {channels.map((ch, i) => (
-          <motion.a
+          <motion.div
             key={ch.label}
-            href={ch.href}
-            target={ch.label !== "Email" ? "_blank" : undefined}
-            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
           >
-            <GlassCard hover className="h-full">
-              <ch.icon className="h-5 w-5 text-accent" />
-              <p className="mt-3 font-mono text-xs text-muted">{ch.label}</p>
-              <p className="mt-1 text-sm text-foreground">{ch.value}</p>
-            </GlassCard>
-          </motion.a>
+            <a
+              href={ch.href}
+              target={ch.external ? "_blank" : undefined}
+              rel={ch.external ? "noopener noreferrer" : undefined}
+              className="block"
+            >
+              <GlassCard hover className="h-full">
+                <ch.icon className="h-5 w-5 text-accent" />
+                <p className="mt-3 font-mono text-xs text-muted">{ch.label}</p>
+                <p className="mt-1 text-sm text-foreground">{ch.value}</p>
+              </GlassCard>
+            </a>
+          </motion.div>
         ))}
       </div>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <a
-          href={`mailto:${profile.contact.email}?subject=Let's start a conversation`}
+          href={mailtoHref("Let's start a conversation")}
           className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 font-mono text-sm text-white transition-all hover:bg-accent/90"
         >
           <MessageSquare className="h-4 w-4" />

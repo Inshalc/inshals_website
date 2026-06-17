@@ -13,7 +13,7 @@ export const profile = {
   contact: {
     email: "chaudhryinshal@gmail.com",
     linkedin: "https://www.linkedin.com/in/inshalch",
-    github: "https://github.com/inshalch",
+    github: "https://github.com/Inshalc",
   },
   profileImage: "/profile.jpg",
 } as const;
