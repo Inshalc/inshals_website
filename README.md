@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Inshal Chaudhry — Personal Portfolio
 
-## Getting Started
+A premium RPG-inspired intelligence dashboard portfolio built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy to Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npx vercel
+```
 
-## Learn More
+Or connect this repository to [Vercel](https://vercel.com) for automatic deployments.
 
-To learn more about Next.js, take a look at the following resources:
+## Before Launch
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Contact info** — Update email, LinkedIn, and GitHub in `src/data/profile.ts`
+2. **Verify details** — Review mission and collaboration entries in `src/data/`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Secret Terminal
 
-## Deploy on Vercel
+Press `` ` `` (backtick) anywhere on the site to open the hidden terminal.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Commands: `help`, `whoami`, `projects`, `skills`, `contact`, `future`, `sudo hire inshal`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Structure
+
+- `/` — System boot + player profile + path navigation
+- `/hire` — Mission reports (work experience)
+- `/collaborate` — Collaboration files + network graph
+- `/invest` — Growth analytics dashboard
+- `/study` — Evolution timeline
+- `/operations` — Project dossiers
+- `/contact` — Establish connection
