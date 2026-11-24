@@ -41,12 +41,12 @@ export const timeline: TimelineMilestone[] = [
   },
   {
     id: "rbc",
-    year: "2025",
-    sortYear: 2025,
+    year: "2026",
+    sortYear: 2025.99,
     title: "RBC — Machine Learning Engineer",
-    subtitle: "Enterprise AI at Scale",
+    subtitle: "Generative AI · Jan 2026 – Aug 2026",
     narrative:
-      "Joined RBC as a Machine Learning Engineer, applying AI expertise in a regulated financial environment. Building production ML systems with engineering rigor and enterprise standards.",
+      "Completed an eight-month Machine Learning Engineer co-op on RBC's Generative AI team. Built production ML systems in a regulated financial environment, and wrapped the term in August 2026.",
     type: "career",
   },
   {
@@ -113,9 +113,10 @@ export const timeline: TimelineMilestone[] = [
     id: "hydro",
     year: "2026",
     sortYear: 2026.1,
-    title: "Hydro One — Incoming",
-    subtitle: "Incoming",
-    narrative: "Incoming role at Hydro One.",
+    title: "Hydro One — AI Solutions",
+    subtitle: "AI Solutions · Sep 2026 – Present",
+    narrative:
+      "Started at Hydro One in September 2026 in AI Solutions, moving from the incoming work term into the current role. Applying AI at a major utility after the machine learning co-op at RBC.",
     type: "career",
   },
 ];

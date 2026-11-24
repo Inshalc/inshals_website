@@ -28,8 +28,8 @@ export default function InvestPage() {
         <div className="mt-4 space-y-3 text-sm text-foreground/80">
           <p>
             <strong className="text-foreground">Enterprise + Startup duality:</strong>{" "}
-            Production ML at RBC combined with startup agility from Heartline
-            creates a rare blend of scale and speed.
+            Current AI Solutions work at Hydro One, a completed Generative AI
+            co-op at RBC, and startup agility from Heartline.
           </p>
           <p>
             <strong className="text-foreground">Leadership at every layer:</strong>{" "}

@@ -12,21 +12,25 @@ export interface Mission {
 export const missions: Mission[] = [
   {
     id: "001",
-    role: "Incoming",
+    role: "AI Solutions",
     company: "Hydro One",
-    status: "incoming",
-    minimal: true,
+    status: "active",
+    period: "Sep 2026 – Present",
+    objective:
+      "Build AI solutions at Hydro One, applying machine learning inside a large utility after the Women in Engineering work term.",
+    outcome:
+      "Started in September 2026. Current role is AI Solutions, following the completed Generative AI co-op at RBC.",
   },
   {
     id: "002",
     role: "Machine Learning Engineer",
     company: "RBC",
-    status: "active",
-    period: "Present",
+    status: "completed",
+    period: "Jan 2026 – Aug 2026",
     objective:
-      "Develop and deploy machine learning solutions within a financial technology environment. Collaborate with engineering teams to build scalable, production-ready AI systems.",
+      "Develop and deploy machine learning solutions on the Generative AI team. Collaborate with engineering teams to build scalable, production-ready AI systems.",
     outcome:
-      "Contributing to ML-driven products in a regulated enterprise setting. Applying software engineering rigor to model development, data pipelines, and deployment workflows.",
+      "Completed an eight-month co-op in August 2026. Shipped ML work in a regulated enterprise setting, from model development through data pipelines and deployment.",
   },
   {
     id: "003",

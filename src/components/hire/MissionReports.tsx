@@ -52,6 +52,9 @@ export function MissionReports() {
                     </p>
                     <h3 className="mt-1 text-lg font-semibold">{mission.role}</h3>
                     <p className="font-mono text-sm text-muted">{mission.company}</p>
+                    {mission.period && (
+                      <p className="mt-1 font-mono text-xs text-muted">{mission.period}</p>
+                    )}
                   </div>
                   <div className="flex items-center gap-2">
                     {mission.status && (
