@@ -10,6 +10,28 @@ export interface Collaboration {
 
 export const collaborations: Collaboration[] = [
   {
+    id: "base44",
+    title: "Ambassador",
+    organization: "Base44",
+    role: "Ambassador",
+    description:
+      "Started as a Base44 ambassador in September 2026, representing the product with the founding cohort of campus impact leaders.",
+    highlights: [
+      "Joined as an ambassador",
+      "Part of the founding campus impact cohort",
+    ],
+    tags: ["Ambassador", "AI", "Community"],
+  },
+  {
+    id: "cohere-labs",
+    title: "Research",
+    organization: "Cohere Labs",
+    role: "Research",
+    description: "Currently doing research with Cohere Labs.",
+    highlights: ["Working with Cohere Labs on research"],
+    tags: ["Research", "AI"],
+  },
+  {
     id: "ci-tech",
     title: "President & Co-Founder",
     organization: "CI Tech",
@@ -142,6 +164,8 @@ export const networkNodes: NetworkNode[] = [
   { id: "rbc", label: "RBC", type: "org", x: 80, y: 55 },
   { id: "heartline", label: "Heartline", type: "org", x: 320, y: 55 },
   { id: "hydro", label: "Hydro One", type: "org", x: 200, y: 25 },
+  { id: "base44", label: "Base44", type: "org", x: 130, y: 95 },
+  { id: "cohere", label: "Cohere Labs", type: "org", x: 275, y: 95 },
   { id: "ci-tech", label: "CI Tech", type: "org", x: 35, y: 195 },
   { id: "cloud", label: "Cloud Club", type: "org", x: 95, y: 265 },
   { id: "invest", label: "Invest Club", type: "org", x: 155, y: 295 },
@@ -157,6 +181,8 @@ export const networkEdges: NetworkEdge[] = [
   { from: "inshal", to: "rbc" },
   { from: "inshal", to: "heartline" },
   { from: "inshal", to: "hydro" },
+  { from: "inshal", to: "base44" },
+  { from: "inshal", to: "cohere" },
   { from: "inshal", to: "ci-tech" },
   { from: "inshal", to: "cloud" },
   { from: "inshal", to: "invest" },

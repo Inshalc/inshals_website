@@ -113,10 +113,30 @@ export const timeline: TimelineMilestone[] = [
     id: "hydro",
     year: "2026",
     sortYear: 2026.1,
-    title: "Hydro One — AI Solutions",
-    subtitle: "AI Solutions · Sep 2026 – Present",
+    title: "Hydro One — AI Solution Engineer",
+    subtitle: "AI Solution Engineer · Sep 2026 – Present",
     narrative:
-      "Started at Hydro One in September 2026 in AI Solutions, moving from the incoming work term into the current role. Applying AI at a major utility after the machine learning co-op at RBC.",
+      "Currently working at Hydro One as an AI Solution Engineer, a role that started in September 2026 after the machine learning co-op at RBC.",
+    type: "career",
+  },
+  {
+    id: "base44",
+    year: "2026",
+    sortYear: 2026.11,
+    title: "Base44 — Ambassador",
+    subtitle: "Ambassador · Sep 2026 – Present",
+    narrative:
+      "Started as a Base44 ambassador in September 2026, representing the product with the founding cohort of campus impact leaders.",
+    type: "leadership",
+  },
+  {
+    id: "cohere-labs",
+    year: "2026",
+    sortYear: 2026.12,
+    title: "Cohere Labs — Research",
+    subtitle: "Research · Present",
+    narrative:
+      "Currently doing research with Cohere Labs.",
     type: "career",
   },
 ];

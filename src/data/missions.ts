@@ -12,17 +12,39 @@ export interface Mission {
 export const missions: Mission[] = [
   {
     id: "001",
-    role: "AI Solutions",
+    role: "AI Solution Engineer",
     company: "Hydro One",
     status: "active",
     period: "Sep 2026 – Present",
     objective:
-      "Build AI solutions at Hydro One, applying machine learning inside a large utility after the Women in Engineering work term.",
+      "Work as an AI Solution Engineer at Hydro One, building AI solutions inside a large utility.",
     outcome:
-      "Started in September 2026. Current role is AI Solutions, following the completed Generative AI co-op at RBC.",
+      "Currently in the role, which started in September 2026 after the Generative AI co-op at RBC.",
   },
   {
     id: "002",
+    role: "Ambassador",
+    company: "Base44",
+    status: "active",
+    period: "Sep 2026 – Present",
+    objective:
+      "Represent Base44 as an ambassador, starting with the founding cohort of campus impact leaders.",
+    outcome:
+      "Currently in the ambassador role, which started in September 2026.",
+  },
+  {
+    id: "003",
+    role: "Research",
+    company: "Cohere Labs",
+    status: "active",
+    period: "Present",
+    objective:
+      "Contribute to research at Cohere Labs.",
+    outcome:
+      "Currently working with Cohere Labs on research.",
+  },
+  {
+    id: "004",
     role: "Machine Learning Engineer",
     company: "RBC",
     status: "completed",
@@ -33,7 +55,7 @@ export const missions: Mission[] = [
       "Completed an eight-month co-op in August 2026. Shipped ML work in a regulated enterprise setting, from model development through data pipelines and deployment.",
   },
   {
-    id: "003",
+    id: "005",
     role: "Software Engineer Intern",
     company: "Heartline",
     status: "completed",
@@ -43,7 +65,7 @@ export const missions: Mission[] = [
       "Gained hands-on experience shipping production code in a startup environment. Strengthened full-stack development and agile collaboration skills.",
   },
   {
-    id: "004",
+    id: "006",
     role: "Research Assistant",
     company: "Ontario Tech University",
     status: "completed",
@@ -53,7 +75,7 @@ export const missions: Mission[] = [
       "Contributed to research methodology, data analysis, and technical documentation within an academic research environment.",
   },
   {
-    id: "005",
+    id: "007",
     role: "Software Developer Intern",
     company: "EmpowerHer",
     status: "completed",

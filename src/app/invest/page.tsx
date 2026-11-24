@@ -28,8 +28,9 @@ export default function InvestPage() {
         <div className="mt-4 space-y-3 text-sm text-foreground/80">
           <p>
             <strong className="text-foreground">Enterprise + Startup duality:</strong>{" "}
-            Current AI Solutions work at Hydro One, a completed Generative AI
-            co-op at RBC, and startup agility from Heartline.
+            Current work is AI Solution Engineer at Hydro One, ambassador at
+            Base44, and research at Cohere Labs, after a completed Generative
+            AI co-op at RBC and startup work at Heartline.
           </p>
           <p>
             <strong className="text-foreground">Leadership at every layer:</strong>{" "}
